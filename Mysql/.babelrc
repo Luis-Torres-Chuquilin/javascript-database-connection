@@ -1,0 +1,6 @@
+{
+    "presets": ["@babel/preset-env"],
+    "plugins": ["@babel/plugin-proposal-class-properties"]
+}
+
+// npm install @babel/plugin-proposal-class-properties --save-dev
