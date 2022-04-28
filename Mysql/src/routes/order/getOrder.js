@@ -13,8 +13,11 @@ export const getOrder = {
   handler: async (req, res) => {
     const order = new OrderService(config.mysql.client);
     const result = await order.getAll();
-    // console.log("result", result);
 
-    res.status(200).send(JSON.stringify(result));
+    // console.log(typeof result); // object
+
+    // Tow way of response with json() or with send()
+    res.status(200).json(result);
+    // res.status(200).send(JSON.stringify(result));
   },
 };
